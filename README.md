@@ -1,5 +1,7 @@
 # eric
 
+[![Build Status](https://travis-ci.org/Eric-all/Eric.svg?branch=master)](https://travis-ci.org/Eric-all/Eric)
+
 > A Vue.js project
 
 ## Build Setup
