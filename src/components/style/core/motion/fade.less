@@ -1,0 +1,32 @@
+.fade-motion(@className, @keyframeName) {
+  .make-motion(@className, @keyframeName);
+  .@{className}-enter,
+  .@{className}-active {
+    opacity: 0;
+    animation-timing-function: linear;
+  }
+  .@{className}-leave,
+  .@{className}-leave-active {
+    animation-timing-function: linear;
+  }
+}
+
+.fade-motion(fade, antFade);
+
+@keyframes antFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes antFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
