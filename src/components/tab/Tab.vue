@@ -1,7 +1,7 @@
 <template>
 
   <div :class="classes">
-    <div class="ant-tabs-content ant-tabs-content-animated" :style="tabContent" v-if="position === 'bottom'">
+    <div :class="contentClasses" :style="tabContent" v-if="position === 'bottom'">
       <slot></slot>
     </div>
     <div role="tablist" class="ant-tabs-bar" tabindex="0" ref="tablist">
