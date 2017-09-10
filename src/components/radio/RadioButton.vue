@@ -22,7 +22,6 @@
   export default {
     name: 'RadioButton',
     mixins: [ Mixin ],
-    props: {},
     computed: {
       classes () {
         return {
