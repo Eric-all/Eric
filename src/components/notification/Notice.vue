@@ -2,7 +2,7 @@
   <transition :name="transition">
     <div :class="noticeClass" :style="styles">
         <div :class="[`${prefixCls}-notice-content`]" ref="content" v-html="content"></div>
-        <a tabIndex="0" @Click="close" :class="[`${prefixCls}-notice-close`]" v-if="closable">
+        <a tabIndex="0" @click="handlerClose" :class="[`${prefixCls}-notice-close`]" v-if="closable">
           <span :class="[`${prefixCls}-notice-close-x`]"></span>
         </a>
     </div>
@@ -52,7 +52,7 @@
           this.closeTimer = null
         }
       },
-      close () {
+      handlerClose () {
         this.clearCloseTimer()
         this.$parent.remove(this.name)
         this.onClose()
