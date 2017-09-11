@@ -40,6 +40,7 @@
         type: String,
         default: 'rc-notification-fade'
       },
+      placement: String,
       styles: {
         type: Object,
         default: () => {
@@ -74,7 +75,8 @@
     computed: {
       classes () {
         return {
-          [`${this.prefixCls}`]: true
+          [`${this.prefixCls}`]: true,
+          [`${this.prefixCls}-${this.placement}`]: this.placement
         }
       }
     }

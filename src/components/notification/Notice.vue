@@ -38,7 +38,7 @@
     mounted () {
       if (this.duration) {
         this.closeTimer = setTimeout(() => {
-          this.close()
+          this.handlerClose()
         }, this.duration * 1000)
       }
     },
