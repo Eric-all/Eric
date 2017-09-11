@@ -124,27 +124,17 @@
     animation-timing-function: @ease-in-out;
   }
 
-  &-fade-enter,
-  &-fade-appear {
+  &-fade-enter-active {
     opacity: 0;
-    .notification-fade-effect();
-    animation-play-state: paused;
-  }
-
-  &-fade-leave {
-    .notification-fade-effect();
-    animation-duration: 0.2s;
-    animation-play-state: paused;
-  }
-
-  &-fade-enter&-fade-enter-active,
-  &-fade-appear&-fade-appear-active {
     animation-name: NotificationFadeIn;
+    .notification-fade-effect();
     animation-play-state: running;
   }
 
-  &-fade-leave&-fade-leave-active {
+  &-fade-leave-active {
     animation-name: NotificationFadeOut;
+    .notification-fade-effect();
+    animation-duration: 0.2s;
     animation-play-state: running;
   }
 }
